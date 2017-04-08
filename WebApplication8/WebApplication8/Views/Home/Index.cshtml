@@ -1,0 +1,83 @@
+﻿@model IEnumerable<WebApplication8.Models.Zapolnenie>
+
+<p>@Html.ActionLink("Заполнить", "zapolnit", "Home",null,new { @class = "btn btn-default" } )</p>
+<table class="table table-condensed table-hover">
+<tr>
+    <th>Имя</th>
+    <th>Фамилия</th>
+    <th>Адрес</th>
+    <th>Пол</th>
+    <th>Идентификационный код</th>
+    <th>Действие</th>
+
+</tr>
+    @foreach (var item in Model)
+
+    {
+        <tr>
+            <td>@item.ZapolnenieId</td>
+            <td>@item.name</td>
+            <td>@item.surname</td>
+            <td>@item.addres</td>
+            <td>@item.sex</td>
+            <td>@item.idnumber</td>
+            <td>@Html.ActionLink("Редактировать", "EditZapoln", "Home", new {id=item.ZapolnenieId }, null)|@Html.ActionLink("Удалить", "DeleteZp", "Home", new { id = item.ZapolnenieId }, null) </td>
+
+        </tr>
+       
+    }
+
+
+</table>
+
+
+@*@{
+    Layout = null;
+}
+
+
+    
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Vedomosti</title>
+</head>
+<body>
+    <div>
+        <h3>Zapolnenie Vedomostey</h3>
+        <table>
+            <tr>
+                <td><p>Имя</p></td>
+                <td><p>Фамилия</p></td>
+                <td><p>Адрес</p></td>
+                <td><p>ahhaaha</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Zapolnenie)
+            {
+            
+                <tr>
+
+                    <td><p>@b.name</p></td>
+                    <td><p>@b.surname</p></td>
+                    <td><p>@b.addres</p></td>
+                    <td><p>@b.ZapolnId</p></td>
+                    ZapolnId
+                    <td><p><a href="/Home/zapolnit/@b.Id">Заполнить</a></p></td>
+                </tr>
+            }
+        </table>
+
+
+
+        
+
+
+
+
+
+    </div>
+</body>
+</html>*@

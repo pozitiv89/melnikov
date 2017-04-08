@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Заполнение</title>
+</head>
+<body>
+    <div>
+        <h3>Форма заполнения данных</h3>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.ZapolnId" name="ZapolnId" />
+            <table>
+                <tr>
+                    <td><p>Введите свое имя </p></td>
+                    <td><input type="text" name="name" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введите фамилию :</p></td>
+                    <td>
+                        <input type="text" name="surname" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Введите адрес :</p></td>
+                    <td>
+                        <input type="text" name="addres" />
+                        </td>
+                   </tr>
+                <tr> 
+                <td><p>Введите пол :</p></td>
+                <td>
+                    <input type="text" name="sex" />
+                </td>
+                </tr>
+                <tr>
+                <td><p>Введите Идентификационный код :</p></td>
+                    <td>
+                        <input type="text" name="idnumber" />
+                    </td></tr>
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
