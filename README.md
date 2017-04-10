@@ -1,2 +1,5 @@
 # melnikov
-school projects
+Лабораторная работа №2-3
+Тема: Разработка Web-приложения (DAO, Service(BL), Presentation) URL
+Выполнили: Мельников Б.В. Калиниченко А.Д. 
+
